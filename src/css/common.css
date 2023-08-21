@@ -16,3 +16,30 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: segoe print, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: tomato;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.value {
+  font-size: 120px;
+  margin-bottom: 5px;
+}
+
+.label {
+  font-size: 14px;
+  text-transform: uppercase;
+}
