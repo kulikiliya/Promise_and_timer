@@ -80,21 +80,6 @@ const options = {
           minutesScore.textContent = addLeadingZero(minutes);
           secondsScore.textContent = addLeadingZero(seconds);
       };
-// убираем отсчет <0 - не работает
-//       if (secondsScore.textContent === '00' && 
-//           hoursScore.textContent === '00' &&
-//           minutesScore.textContent === '00' &&
-// daysScore.textContent === '0'
-//       ) {
-//           clearInterval(timeId)
-//       }
-    //   const startTimer = () => { 
-    //   if (timeId) {
-    //     clearInterval(timeId);
-    //       }; 
-    //       timer();        
-    //       timeId = setInterval(timer, 1000);
-    //   };
     
     const startTimer = () => {
         // Чистим таймер
