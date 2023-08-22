@@ -108,3 +108,5 @@ const options = {
 
 // вызов флэтпикера
 flatpickr(inputField, options);
+
+// test
