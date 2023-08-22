@@ -9,6 +9,8 @@ function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0)}`;
 }
 
+stopButton.disabled = true;
+
 function changeColor(){
   const currentColor = getRandomHexColor();
   bodyRef.style.backgroundColor = currentColor;
@@ -17,11 +19,13 @@ function changeColor(){
 startButton.addEventListener('click', () => {
     promtCounter = setInterval(changeColor, PROMT_DELAY);
     if (promtCounter) {
-        startButton.disabled = true;
+      startButton.disabled = true;
+      stopButton.disabled = false;
     }
 })
 
 stopButton.addEventListener('click', () => {
     clearInterval(promtCounter);
-    startButton.disabled = false;
+  startButton.disabled = false;
+  stopButton.disabled = true;
 })

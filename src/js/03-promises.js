@@ -26,14 +26,13 @@ function onSubmitForm(event) {
   let delayValue = firstDelay.value * 1; // первая задержка
   let stepValue = delayStep.value * 1; // доп дилей 
   let amountValue = amount.value * 1; // количество запросов - сколько раз мы вызываем функцию 
-
+ 
   if (delayValue <  0 || stepValue < 0 || amountValue < 0) {
     Notiflix.Notify.failure("Error")
   } else {
     // перебираем запросы
-for (let i = 1; i <= amountValue; i += 1) {
-    let promiseValue = delayValue + stepValue * i; //  считаем тотал задержку , которая идет потом как переменная для промиса. шаг i - position
-
+    for (let i = 1; i <= amountValue; i += 1) {
+      let promiseValue = delayValue + stepValue * (i - 1); //считаем тотал задержку , которая идет потом как переменная для промиса. шаг i - position
     createPromise(i, promiseValue)
       .then(({ position, delay }) => {
         Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);

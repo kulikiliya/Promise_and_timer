@@ -82,6 +82,8 @@ const options = {
       };
     
     const startTimer = () => {
+      startButton.setAttribute('disabled', true);
+      inputField.setAttribute('disabled', true);
         // Чистим таймер
     if (timeId) {
         clearInterval(timeId);
@@ -102,7 +104,8 @@ const options = {
 };
 
       startButton.addEventListener('click', startTimer);
-      
+    
+    
   },
 };
 
